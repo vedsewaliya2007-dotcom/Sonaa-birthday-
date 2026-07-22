@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="home-page">
+
+<div class="bg-gradient"></div>
+<div class="stars"></div>
+
+<div class="glass-card home-card">
+
+<h3 class="welcome">
+Welcome To
+</h3>
+
+<h1 class="main-name">
+
+❤️ Forever Surprise ❤️
+
+</h1>
+
+<p id="typingText"></p>
+
+<div class="home-buttons">
+
+<button class="primary-btn" onclick="startJourney()">
+
+✨ Start Journey
+
+</button>
+
+<button class="secondary-btn" onclick="toggleMusic()">
+
+🎵 Music
+
+</button>
+
+</div>
+
+</div>
+
+<audio id="bgMusic" loop autoplay>
+
+<source src="song.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+const message="There's something special I want to tell you...thats why I made something special for you.... ❤️";
+
+let i=0;
+
+function typing(){
+
+if(i<message.length){
+
+document.getElementById("typingText").innerHTML+=message.charAt(i);
+
+i++;
+
+setTimeout(typing,45);
+
+}
+
+}
+
+typing();
+
+function startJourney(){
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location.href="scratch.html";
+
+},800);
+
+}
+
+function toggleMusic(){
+
+const music=document.getElementById("bgMusic");
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
+
+window.onload=()=>{
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+document.body.style.transition=".8s";
+
+document.body.style.opacity="1";
+
+},100);
+
+}
+
+</script>
+
+</body>
+
+</html>

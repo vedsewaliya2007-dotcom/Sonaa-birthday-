@@ -1,0 +1,519 @@
+/* ===================================
+   FINAL PAGE CSS - PART 1
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#071120;
+
+    color:#fff;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+/* Background */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#2563eb55,transparent 35%),
+    radial-gradient(circle at bottom,#7c3aed55,transparent 40%),
+    #071120;
+
+    z-index:-3;
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:100%;
+
+    max-width:450px;
+
+    margin:auto;
+
+    padding:35px 18px 80px;
+
+}
+
+/* Birthday Card */
+
+.birthday-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:28px 22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+.birthday-card h1{
+
+    font-size:34px;
+
+    background:linear-gradient(90deg,#60A5FA,#fff,#A855F7);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    margin-bottom:10px;
+
+}
+
+.birthday-card h2{
+
+    color:#7DD3FC;
+
+    margin-bottom:18px;
+
+}
+
+.birthday-card p{
+
+    color:#E2E8F0;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+.cake{
+
+    font-size:70px;
+
+    margin:25px 0;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+}/* ===================================
+   FINAL PAGE CSS - PART 2
+=================================== */
+
+/* Celebration Cards */
+
+.celebration-card,
+.wish-card,
+.quote-card,
+.thankyou-card,
+.ending-card{
+
+    margin-top:25px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.30);
+
+    transition:.35s;
+
+}
+
+.celebration-card:hover,
+.wish-card:hover,
+.quote-card:hover,
+.thankyou-card:hover,
+.ending-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.35);
+
+}
+
+/* Headings */
+
+.celebration-card h2,
+.wish-card h2,
+.quote-card h2,
+.thankyou-card h2,
+.ending-card h1,
+.ending-card h2{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.celebration-card h2,
+.wish-card h2,
+.quote-card h2,
+.thankyou-card h2{
+
+    color:#7DD3FC;
+
+}
+
+.ending-card h1{
+
+    font-size:30px;
+
+    background:linear-gradient(90deg,#60A5FA,#FFFFFF,#A855F7);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.ending-card h2{
+
+    color:#A5F3FC;
+
+}
+
+/* Paragraph */
+
+.celebration-card p,
+.quote-card p,
+.thankyou-card p,
+.ending-card p{
+
+    color:#E2E8F0;
+
+    line-height:1.8;
+
+    text-align:center;
+
+    font-size:15px;
+
+}
+
+/* Wish List */
+
+.wish-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.wish-card li{
+
+    background:rgba(255,255,255,.05);
+
+    margin:10px 0;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    color:#F8FAFC;
+
+    transition:.3s;
+
+}
+
+.wish-card li:hover{
+
+    background:rgba(96,165,250,.15);
+
+    transform:translateX(5px);
+
+}
+
+/* Quote */
+
+.quote-card{
+
+    border-left:4px solid #60A5FA;
+
+}
+
+/* Ending Card */
+
+.ending-card{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}/* ===================================
+   FINAL PAGE CSS - PART 3
+=================================== */
+
+/* Button Section */
+
+.button-section{
+
+    margin-top:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+/* Buttons */
+
+.replay-btn,
+.home-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
+
+}
+
+.replay-btn:hover,
+.home-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.45);
+
+}
+
+/* Floating Hearts */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    pointer-events:none;
+
+    animation:heartFloat linear forwards;
+
+    z-index:1;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Floating Stars */
+
+.star{
+
+    position:fixed;
+
+    bottom:-20px;
+
+    pointer-events:none;
+
+    animation:starFloat linear forwards;
+
+    z-index:1;
+
+}
+
+@keyframes starFloat{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:1;
+
+    }
+
+}
+
+/* Birthday Popup */
+
+.birthday-popup{
+
+    position:fixed;
+
+    top:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:rgba(37,99,235,.92);
+
+    color:#fff;
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    font-weight:600;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+
+    z-index:9999;
+
+    transition:.5s;
+
+}
+
+/* Mobile Responsive */
+
+@media(max-width:480px){
+
+.container{
+
+padding:25px 14px 60px;
+
+}
+
+.birthday-card,
+.celebration-card,
+.wish-card,
+.quote-card,
+.thankyou-card,
+.ending-card{
+
+padding:20px 16px;
+
+border-radius:20px;
+
+}
+
+.birthday-card h1{
+
+font-size:28px;
+
+}
+
+.birthday-card h2{
+
+font-size:22px;
+
+}
+
+.cake{
+
+font-size:56px;
+
+}
+
+.button-section{
+
+gap:12px;
+
+}
+
+.replay-btn,
+.home-btn{
+
+font-size:15px;
+
+padding:15px;
+
+}
+
+}
+
+/* Prevent Horizontal Scroll */
+
+html,
+body{
+
+max-width:100%;
+
+overflow-x:hidden;
+
+}
+

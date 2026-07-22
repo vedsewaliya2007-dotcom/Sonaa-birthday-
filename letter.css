@@ -1,0 +1,453 @@
+/* ==========================
+   LETTER PAGE - PART 1
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#071120;
+
+    color:#fff;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* Background */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,#2563eb55,transparent 35%),
+    radial-gradient(circle at bottom,#7c3aed55,transparent 40%),
+    #071120;
+
+    z-index:-3;
+
+}
+
+/* Container */
+
+.letter-container{
+
+    width:100%;
+
+    max-width:480px;
+
+    margin:auto;
+
+    padding:40px 18px 80px;
+
+}
+
+/* Card */
+
+.letter-card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+/* Heading */
+
+.letter-card h1{
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+    background:linear-gradient(90deg,#60A5FA,#fff,#A855F7);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.letter-card h2{
+
+    text-align:center;
+
+    color:#7DD3FC;
+
+    margin-bottom:30px;
+
+}
+
+/* Letter Text */
+
+.letter-text{
+
+    font-size:16px;
+
+    line-height:2;
+
+    color:#E2E8F0;
+
+}
+
+.letter-text b{
+
+    color:#60A5FA;
+
+}/* ==========================
+   LETTER PAGE - PART 2
+========================== */
+
+/* Button Area */
+
+.button-area{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+/* Premium Button */
+
+.button-area button{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(37,99,235,.35);
+
+}
+
+.button-area button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.45);
+
+}
+
+/* Floating Glow */
+
+.letter-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    left:-120px;
+
+    width:220px;
+
+    height:220px;
+
+    background:radial-gradient(circle,
+    rgba(96,165,250,.25),
+    transparent 70%);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+/* Card Position */
+
+.letter-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Fade Animation */
+
+.letter-card{
+
+    animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Text Animation */
+
+.letter-text{
+
+    animation:showText 1.4s ease;
+
+}
+
+@keyframes showText{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* Beautiful Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#071120;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(#3B82F6,#8B5CF6);
+
+    border-radius:20px;
+
+}/* ==========================
+   LETTER PAGE - PART 3
+========================== */
+
+/* Floating Hearts */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    color:#ff6fa5;
+
+    font-size:20px;
+
+    opacity:.6;
+
+    pointer-events:none;
+
+    animation:floatHeart 8s linear infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0) scale(.8);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.7;
+
+    }
+
+    100%{
+
+        transform:translateY(-120vh) scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Glass Shine */
+
+.letter-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.15),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+}
+
+.letter-card:hover::after{
+
+    left:150%;
+
+}
+
+/* Mobile Responsive */
+
+@media(max-width:480px){
+
+    .letter-container{
+
+        padding:25px 14px 60px;
+
+    }
+
+    .letter-card{
+
+        padding:22px 18px;
+
+        border-radius:22px;
+
+    }
+
+    .letter-card h1{
+
+        font-size:26px;
+
+    }
+
+    .letter-card h2{
+
+        font-size:20px;
+
+        margin-bottom:20px;
+
+    }
+
+    .letter-text{
+
+        font-size:15px;
+
+        line-height:1.9;
+
+    }
+
+    .button-area button{
+
+        font-size:16px;
+
+        padding:15px;
+
+    }
+
+}
+
+/* Prevent Horizontal Scroll */
+
+html,
+body{
+
+    overflow-x:hidden;
+
+    max-width:100%;
+
+}
+
+/* Page Fade */
+
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+

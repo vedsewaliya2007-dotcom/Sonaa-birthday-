@@ -1,0 +1,940 @@
+/* ==========================================
+   FOREVER SURPRISE - PREMIUM STYLE
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#090116;
+
+overflow:hidden;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+position:relative;
+
+}
+
+/* Animated Background */
+
+.bg-gradient{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+background:radial-gradient(circle,#8b5cf6,#6d28d9,#090116);
+
+border-radius:50%;
+
+filter:blur(140px);
+
+animation:moveBG 12s infinite alternate ease-in-out;
+
+z-index:-2;
+
+}
+
+@keyframes moveBG{
+
+0%{
+
+transform:translate(-200px,-120px);
+
+}
+
+100%{
+
+transform:translate(180px,120px);
+
+}
+
+}
+
+/* Floating Stars */
+
+.stars{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px, transparent 1px);
+
+background-size:40px 40px;
+
+opacity:.25;
+
+animation:starsMove 60s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-500px);
+
+}
+
+}
+
+/* Glass Card */
+
+.glass-card{
+
+width:90%;
+
+max-width:420px;
+
+padding:35px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 30px rgba(139,92,246,.35),
+
+0 0 80px rgba(168,85,247,.18);
+
+text-align:center;
+
+}
+
+/* Logo */
+
+.logo{
+
+font-size:18px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:20px;
+
+color:#d8b4fe;
+
+}
+
+/* Heading */
+
+.glass-card h1{
+
+font-size:34px;
+
+font-weight:700;
+
+margin-bottom:12px;
+
+}
+
+.glass-card p{
+
+font-size:15px;
+
+color:#d1d5db;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+/* Gift */
+
+.gift-area{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.gift-box{
+
+font-size:90px;
+
+cursor:pointer;
+
+transition:.4s;
+
+animation:giftFloat 2s infinite ease-in-out;
+
+}
+
+.gift-box:hover{
+
+transform:scale(1.12) rotate(8deg);
+
+}
+
+@keyframes giftFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+.gift-area span{
+
+color:#c084fc;
+
+font-size:14px;
+
+}
+
+/* Password */
+
+.password-section{
+
+display:none;
+
+margin-top:30px;
+
+animation:fadeUp .7s;
+
+}
+
+.password-section input{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:#ffffff15;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+margin-bottom:15px;
+
+}
+
+.password-section input::placeholder{
+
+color:#ddd;
+
+}
+
+.password-section button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#9333ea,#7c3aed);
+
+color:white;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.password-section button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 25px rgba(147,51,234,.45);
+
+}
+
+/* Footer */
+
+.footer{
+
+position:absolute;
+
+bottom:18px;
+
+font-size:13px;
+
+color:#bdbdbd;
+
+}
+
+/* Animation */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}/* ===========================
+HOME PAGE
+=========================== */
+
+.home-card{
+
+text-align:center;
+
+padding:45px 30px;
+
+}
+
+.welcome{
+
+font-size:18px;
+
+color:#d8b4fe;
+
+margin-bottom:10px;
+
+}
+
+.main-name{
+
+font-size:36px;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+#typingText{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#ddd;
+
+min-height:120px;
+
+margin-bottom:35px;
+
+}
+
+.home-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.primary-btn{
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#9333ea,#6d28d9);
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(147,51,234,.4);
+
+}
+
+.secondary-btn{
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.secondary-btn:hover{
+
+background:rgba(255,255,255,.15);
+
+}/* ===========================
+Gallery Page
+=========================== */
+
+.gallery-container{
+
+width:90%;
+
+max-width:420px;
+
+padding:30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 0 40px rgba(139,92,246,.25);
+
+}
+
+.gallery-container h1{
+
+margin-bottom:10px;
+
+font-size:30px;
+
+}
+
+.gallery-container p{
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.slider{
+
+margin:20px 0;
+
+}
+
+.slider img{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:3px solid rgba(255,255,255,.15);
+
+transition:.5s;
+
+}
+
+.gallery-buttons{
+
+display:flex;
+
+justify-content:space-between;
+
+gap:10px;
+
+margin-top:20px;
+
+}
+
+.gallery-buttons button,
+
+.page-button button{
+
+width:100%;
+
+padding:14px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#9333ea,#6d28d9);
+
+color:#fff;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.gallery-buttons button:hover,
+
+.page-button button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(147,51,234,.4);
+
+}/* =====================
+Timeline Page
+===================== */
+
+.timeline-card{
+
+width:92%;
+max-width:430px;
+padding:30px;
+border-radius:25px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+}
+
+.counter{
+
+display:flex;
+
+justify-content:space-between;
+
+margin:25px 0;
+
+gap:10px;
+
+}
+
+.box{
+
+flex:1;
+
+padding:18px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:18px;
+
+}
+
+.box h2{
+
+font-size:28px;
+
+color:#d8b4fe;
+
+}
+
+.timeline{
+
+margin-top:25px;
+
+text-align:left;
+
+}
+
+.item{
+
+display:flex;
+
+margin-bottom:25px;
+
+}
+
+.dot{
+
+width:14px;
+
+height:14px;
+
+background:#a855f7;
+
+border-radius:50%;
+
+margin-right:15px;
+
+margin-top:8px;
+
+box-shadow:0 0 15px #a855f7;
+
+}
+
+.content h3{
+
+margin-bottom:5px;
+
+}
+
+.content p{
+
+color:#ccc;
+
+font-size:14px;
+
+}
+
+.next-btn{
+
+width:100%;
+
+margin-top:25px;
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#9333ea,#6d28d9);
+
+color:#fff;
+
+font-size:16px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}/* ===========================
+BIRTHDAY PAGE
+=========================== */
+
+.birthday-page{
+
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+position:relative;
+
+}
+
+.birthday-bg{
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:url("images/birthday.jpg") center center/cover;
+
+transform:scale(1.08);
+
+animation:zoomBg 15s infinite alternate;
+
+}
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(to top,
+rgba(0,0,0,.8),
+rgba(0,0,0,.3));
+
+}
+
+.birthday-card{
+
+position:relative;
+
+width:90%;
+max-width:420px;
+
+padding:35px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+color:white;
+
+z-index:5;
+
+box-shadow:0 0 40px rgba(59,130,246,.35);
+
+}
+
+#birthdayTitle{
+
+font-size:42px;
+
+margin:15px 0;
+
+color:#FFD54F;
+
+animation:glow 2s infinite alternate;
+
+}
+
+.person-name{
+
+font-size:30px;
+
+color:#60A5FA;
+
+margin-bottom:20px;
+
+}
+
+.birthday-message{
+
+line-height:1.8;
+
+color:#eee;
+
+margin-bottom:30px;
+
+}
+
+.premium-btn{
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:15px;
+
+background:linear-gradient(135deg,#2563EB,#3B82F6);
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.premium-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 25px rgba(37,99,235,.45);
+
+}
+
+/* Floating Hearts */
+
+.hearts span{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:28px;
+
+animation:floatHeart 10s linear infinite;
+
+}
+
+.hearts span:nth-child(1){left:10%;animation-delay:0s;}
+.hearts span:nth-child(2){left:30%;animation-delay:2s;}
+.hearts span:nth-child(3){left:55%;animation-delay:4s;}
+.hearts span:nth-child(4){left:75%;animation-delay:6s;}
+.hearts span:nth-child(5){left:90%;animation-delay:8s;}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px #FFD54F;
+
+}
+
+to{
+
+text-shadow:0 0 35px #FFD54F;
+
+}
+
+}
+
+@keyframes zoomBg{
+
+from{
+
+transform:scale(1.05);
+
+}
+
+to{
+
+transform:scale(1.15);
+
+}
+
+}.like-heart{
+
+position:fixed;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:70px;
+
+animation:heartPop 1.2s forwards;
+
+pointer-events:none;
+
+z-index:999;
+
+}
+
+@keyframes heartPop{
+
+0%{
+
+opacity:0;
+transform:translate(-50%,-50%) scale(.3);
+
+}
+
+30%{
+
+opacity:1;
+transform:translate(-50%,-50%) scale(1.3);
+
+}
+
+100%{
+
+opacity:0;
+transform:translate(-50%,-150%) scale(1.8);
+
+}
+}

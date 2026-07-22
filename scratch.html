@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scratch Surprise</title>
+
+<link rel="stylesheet" href="scratch.css">
+
+</head>
+
+<body>
+
+<!-- Animated Background -->
+<div class="bg-gradient"></div>
+<div class="stars"></div>
+
+<!-- Main Card -->
+<div class="scratch-card">
+
+<h1>🎁 Birthday Surprise</h1>
+
+<p class="hint">
+Scratch the silver card to reveal your surprise...
+</p>
+
+<div class="scratch-container">
+
+<!-- Hidden Image -->
+<img src="https://i.ibb.co/35WLPQ0D/IMG-20260722-WA0011-1.jpg"
+class="hidden-image"
+alt="Birthday">
+
+<!-- Happy Birthday Text -->
+<div class="birthday-text">
+
+<h2>🎉 HAPPY BIRTHDAY SONAA 🎉</h2>
+
+<p>
+Wishing you happiness, love and endless smiles ❤️
+</p>
+
+</div>
+
+<!-- Scratch Canvas -->
+<canvas id="scratchCanvas"></canvas>
+
+</div>
+
+<!-- Progress -->
+<div class="progress-text">
+
+✨ Scratch More...
+
+</div>
+
+<!-- Continue Button -->
+
+<button id="continueBtn"
+onclick="nextPage()">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+<script src="scratch.js"></script>
+
+</body>
+
+</html>
